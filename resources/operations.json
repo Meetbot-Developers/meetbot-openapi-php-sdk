@@ -1,0 +1,2381 @@
+[
+  {
+    "api": "AccountApi",
+    "method": "getProfile",
+    "verb": "POST",
+    "path": "/open/whatsapp/account/profile",
+    "type": "WhatsappAccountProfileResult",
+    "params": [
+      {
+        "type": "WhatAppAccountProfileRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "AccountApi",
+    "method": "updateProfile",
+    "verb": "POST",
+    "path": "/open/whatsapp/account/update/profile",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsAppAccountProfileUpdateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "AccountApi",
+    "method": "listPhoneNumbers",
+    "verb": "POST",
+    "path": "/open/whatsapp/account/phone/numbers",
+    "type": "WhatsappPhoneNumbersResult",
+    "params": [
+      {
+        "type": "WhatAppAccountPhoneNumbersRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "AccountApi",
+    "method": "getWhatsappBusinessInfo",
+    "verb": "POST",
+    "path": "/open/whatsapp/account/whatsapp/business/info",
+    "type": "WhatsappBusinessAccountResult",
+    "params": [
+      {
+        "type": "WhatAppAccountBusinessInfoRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "AccountApi",
+    "method": "getBusinessManagerInfo",
+    "verb": "POST",
+    "path": "/open/whatsapp/account/business/info",
+    "type": "WhatsappBusinessManagerResult",
+    "params": [
+      {
+        "type": "WhatAppAccountBusinessManagerInfoRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "AccountApi",
+    "method": "sendPhoneVerify",
+    "verb": "POST",
+    "path": "/open/whatsapp/account/phone/verify/send",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsAppAccountPhoneVerifySendRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "AccountApi",
+    "method": "checkPhoneVerify",
+    "verb": "POST",
+    "path": "/open/whatsapp/account/phone/verify/check",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsAppAccountPhoneVerifyCheckRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "AccountApi",
+    "method": "getPhoneQuality",
+    "verb": "GET",
+    "path": "/v1/whatsapp/phone/number/quality",
+    "type": "WhatsappPhoneQualityQueryResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "phoneId"
+      }
+    ],
+    "query": [
+      [
+        "phoneId",
+        "phoneId"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "AccountApi",
+    "method": "listPreverifiedPhones",
+    "verb": "GET",
+    "path": "/v1/whatsapp/phone/preVerified",
+    "type": "WhatsappPreverifiedPhoneListResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "businessId"
+      },
+      {
+        "type": "String",
+        "name": "codeVerificationStatus"
+      },
+      {
+        "type": "Long",
+        "name": "limit"
+      },
+      {
+        "type": "String",
+        "name": "after"
+      }
+    ],
+    "query": [
+      [
+        "businessId",
+        "businessId"
+      ],
+      [
+        "codeVerificationStatus",
+        "codeVerificationStatus"
+      ],
+      [
+        "limit",
+        "limit"
+      ],
+      [
+        "after",
+        "after"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "AnalyticsApi",
+    "method": "query",
+    "verb": "GET",
+    "path": "/v1/whatsapp/analytics/query",
+    "type": "WhatsappAnalyticsQueryResult",
+    "params": [
+      {
+        "type": "WhatsappAnalyticsQueryRequest",
+        "name": "request"
+      }
+    ],
+    "query": [
+      [
+        "wabaId",
+        "request.getWabaId()"
+      ],
+      [
+        "field",
+        "request.getField()"
+      ],
+      [
+        "start",
+        "request.getStart()"
+      ],
+      [
+        "end",
+        "request.getEnd()"
+      ],
+      [
+        "granularity",
+        "request.getGranularity()"
+      ],
+      [
+        "phoneNumbers",
+        "request.getPhoneNumbers()"
+      ],
+      [
+        "countryCodes",
+        "request.getCountryCodes()"
+      ],
+      [
+        "productTypes",
+        "request.getProductTypes()"
+      ],
+      [
+        "metricTypes",
+        "request.getMetricTypes()"
+      ],
+      [
+        "pricingTypes",
+        "request.getPricingTypes()"
+      ],
+      [
+        "pricingCategories",
+        "request.getPricingCategories()"
+      ],
+      [
+        "dimensions",
+        "request.getDimensions()"
+      ],
+      [
+        "conversationCategories",
+        "request.getConversationCategories()"
+      ],
+      [
+        "conversationTypes",
+        "request.getConversationTypes()"
+      ],
+      [
+        "conversationDirections",
+        "request.getConversationDirections()"
+      ],
+      [
+        "directions",
+        "request.getDirections()"
+      ],
+      [
+        "templateIds",
+        "request.getTemplateIds()"
+      ],
+      [
+        "templateGroupIds",
+        "request.getTemplateGroupIds()"
+      ],
+      [
+        "groupIds",
+        "request.getGroupIds()"
+      ],
+      [
+        "productType",
+        "request.getProductType()"
+      ],
+      [
+        "useWabaTimezone",
+        "request.getUseWabaTimezone()"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "AnalyticsApi",
+    "method": "enableTemplateInsights",
+    "verb": "POST",
+    "path": "/v1/whatsapp/analytics/templateInsights/enable",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateInsightsEnableRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "AnalyticsApi",
+    "method": "activities",
+    "verb": "GET",
+    "path": "/v1/whatsapp/analytics/activities",
+    "type": "WhatsappAnalyticsActivitiesResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "wabaId"
+      },
+      {
+        "type": "Long",
+        "name": "since"
+      },
+      {
+        "type": "Long",
+        "name": "until"
+      },
+      {
+        "type": "Long",
+        "name": "limit"
+      },
+      {
+        "type": "String",
+        "name": "after"
+      }
+    ],
+    "query": [
+      [
+        "wabaId",
+        "wabaId"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "until",
+        "until"
+      ],
+      [
+        "limit",
+        "limit"
+      ],
+      [
+        "after",
+        "after"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "BizSyncApi",
+    "method": "syncUsers",
+    "verb": "POST",
+    "path": "/open/biz/sync/users",
+    "type": "BizSyncBatchResponse",
+    "params": [
+      {
+        "type": "BizSyncUserBatchRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "BizSyncApi",
+    "method": "syncOrders",
+    "verb": "POST",
+    "path": "/open/biz/sync/orders",
+    "type": "BizSyncBatchResponse",
+    "params": [
+      {
+        "type": "BizSyncOrderBatchRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "BizSyncApi",
+    "method": "syncProducts",
+    "verb": "POST",
+    "path": "/open/biz/sync/products",
+    "type": "BizSyncBatchResponse",
+    "params": [
+      {
+        "type": "BizSyncProductBatchRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "BizSyncApi",
+    "method": "syncProductSeries",
+    "verb": "POST",
+    "path": "/open/biz/sync/product/series",
+    "type": "BizSyncBatchResponse",
+    "params": [
+      {
+        "type": "BizSyncProductSeriesBatchRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "BizSyncApi",
+    "method": "reportEvent",
+    "verb": "POST",
+    "path": "/open/biz/sync/event",
+    "type": "EmptyResult",
+    "params": [
+      {
+        "type": "BizSyncEventReportRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "BizSyncApi",
+    "method": "ctwaConversionPostback",
+    "verb": "POST",
+    "path": "/v1/ctwa/conversion/events",
+    "type": "CtwaConversionResult",
+    "params": [
+      {
+        "type": "CtwaConversionPostbackRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "BizSyncApi",
+    "method": "createCtwaDataset",
+    "verb": "POST",
+    "path": "/v1/ctwa/conversion/dataset/create",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "CtwaDatasetCreateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "BizSyncApi",
+    "method": "queryCtwaDataset",
+    "verb": "GET",
+    "path": "/v1/ctwa/conversion/dataset/query",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "wabaId"
+      }
+    ],
+    "query": [
+      [
+        "wabaId",
+        "wabaId"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "BlockApi",
+    "method": "listGroups",
+    "verb": "GET",
+    "path": "/block/group/list",
+    "type": "List<BlockGroupResponse>",
+    "params": [],
+    "query": [],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "BlockApi",
+    "method": "pageList",
+    "verb": "POST",
+    "path": "/block/page/list",
+    "type": "PageResult<BlockResponse>",
+    "params": [
+      {
+        "type": "PageBlockRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "BlockApi",
+    "method": "generatePreviewUrl",
+    "verb": "GET",
+    "path": "/block/preview/url",
+    "type": "PreviewUrlResult",
+    "params": [
+      {
+        "type": "BlockPreviewRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "BlockApi",
+    "method": "getDynamicParam",
+    "verb": "GET",
+    "path": "/api/v2/whatsapp/message/block/param",
+    "type": "List<BlockDynamicParamResponse>",
+    "params": [
+      {
+        "type": "Long",
+        "name": "blockId"
+      }
+    ],
+    "query": [
+      [
+        "blockId",
+        "blockId"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "CallingApi",
+    "method": "connect",
+    "verb": "POST",
+    "path": "/v1/whatsapp/calls/connect",
+    "type": "WhatsappCallingResult",
+    "params": [
+      {
+        "type": "WhatsappCallingConnectRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CallingApi",
+    "method": "preAccept",
+    "verb": "POST",
+    "path": "/v1/whatsapp/calls/preAccept",
+    "type": "WhatsappCallingResult",
+    "params": [
+      {
+        "type": "WhatsappCallingPreAcceptRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CallingApi",
+    "method": "accept",
+    "verb": "POST",
+    "path": "/v1/whatsapp/calls/accept",
+    "type": "WhatsappCallingResult",
+    "params": [
+      {
+        "type": "WhatsappCallingAcceptRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CallingApi",
+    "method": "reject",
+    "verb": "POST",
+    "path": "/v1/whatsapp/calls/reject",
+    "type": "WhatsappCallingResult",
+    "params": [
+      {
+        "type": "WhatsappCallingRejectRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CallingApi",
+    "method": "terminate",
+    "verb": "POST",
+    "path": "/v1/whatsapp/calls/terminate",
+    "type": "WhatsappCallingResult",
+    "params": [
+      {
+        "type": "WhatsappCallingTerminateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "list",
+    "verb": "POST",
+    "path": "/open/catalog/list",
+    "type": "List<OpenCatalogListResponse>",
+    "params": [
+      {
+        "type": "CatalogListOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "cartStatus",
+    "verb": "POST",
+    "path": "/open/catalog/cart/status",
+    "type": "List<CartStatusResponse>",
+    "params": [
+      {
+        "type": "CartStatusOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "toggleCart",
+    "verb": "POST",
+    "path": "/open/catalog/cart/toggle",
+    "type": "EmptyResult",
+    "params": [
+      {
+        "type": "CartToggleOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "create",
+    "verb": "POST",
+    "path": "/open/catalog/create",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "CatalogCreateOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "delete",
+    "verb": "POST",
+    "path": "/open/catalog/delete",
+    "type": "EmptyResult",
+    "params": [
+      {
+        "type": "CatalogDeleteOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "bindWaba",
+    "verb": "POST",
+    "path": "/open/catalog/bindwaba",
+    "type": "EmptyResult",
+    "params": [
+      {
+        "type": "CatalogBindWabaOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "unbindWaba",
+    "verb": "POST",
+    "path": "/open/catalog/unbindwaba",
+    "type": "EmptyResult",
+    "params": [
+      {
+        "type": "CatalogUnbindWabaOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "listProducts",
+    "verb": "POST",
+    "path": "/open/catalog/product/list",
+    "type": "PageResult<CatalogProductListItemResponse>",
+    "params": [
+      {
+        "type": "ProductListOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "getProduct",
+    "verb": "POST",
+    "path": "/open/catalog/product/detail",
+    "type": "CatalogProductResponse",
+    "params": [
+      {
+        "type": "ProductDetailOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "createProduct",
+    "verb": "POST",
+    "path": "/open/catalog/product/create",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "ProductCreateOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "editProduct",
+    "verb": "POST",
+    "path": "/open/catalog/product/edit",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "ProductEditOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "deleteProduct",
+    "verb": "POST",
+    "path": "/open/catalog/product/delete",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "ProductDeleteOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "batchImport",
+    "verb": "POST",
+    "path": "/open/catalog/product/batchImport",
+    "type": "LongIdResult",
+    "params": [
+      {
+        "type": "ProductBatchImportOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CatalogApi",
+    "method": "batchImportDetail",
+    "verb": "POST",
+    "path": "/open/catalog/product/batchImport/detail",
+    "type": "ProductBatchImportTaskDetailOpenResponse",
+    "params": [
+      {
+        "type": "ProductBatchImportTaskDetailOpenRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CustomerApi",
+    "method": "addChannelUser",
+    "verb": "POST",
+    "path": "/customer/channel/user/add",
+    "type": "EmptyResult",
+    "params": [
+      {
+        "type": "CustomerChannelUserAddRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CustomerApi",
+    "method": "addConsultantAllocationUser",
+    "verb": "POST",
+    "path": "/consultant/allocation/add/user",
+    "type": "EmptyResult",
+    "params": [
+      {
+        "type": "CustomerConsultantAllocationAddUserRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CustomerApi",
+    "method": "listSeats",
+    "verb": "GET",
+    "path": "/open/user/seat/list",
+    "type": "List<UserSeatResponse>",
+    "params": [],
+    "query": [],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "CustomerApi",
+    "method": "getChatStatus",
+    "verb": "POST",
+    "path": "/open/user/chatStatus",
+    "type": "CustomerChatStatusResponse",
+    "params": [
+      {
+        "type": "CustomerChatStatusRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CustomerApi",
+    "method": "createSession",
+    "verb": "POST",
+    "path": "/open/user/seat/createSession",
+    "type": "Boolean",
+    "params": [
+      {
+        "type": "UserSeatSessionRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "CustomerApi",
+    "method": "closeSession",
+    "verb": "POST",
+    "path": "/open/user/seat/closeSession",
+    "type": "Boolean",
+    "params": [
+      {
+        "type": "UserSeatSessionRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "FlowApi",
+    "method": "create",
+    "verb": "POST",
+    "path": "/v1/flow/create",
+    "type": "WhatsappFlowMutationResult",
+    "params": [
+      {
+        "type": "WhatsappFlowCreateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "FlowApi",
+    "method": "update",
+    "verb": "POST",
+    "path": "/v1/flow/update",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappFlowUpdateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "FlowApi",
+    "method": "updateJson",
+    "verb": "POST",
+    "path": "/v1/flow/update/json",
+    "type": "WhatsappFlowMutationResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "flowId"
+      },
+      {
+        "type": "File",
+        "name": "file"
+      }
+    ],
+    "query": [
+      [
+        "flowId",
+        "flowId"
+      ]
+    ],
+    "multipart": true,
+    "jsonBody": false
+  },
+  {
+    "api": "FlowApi",
+    "method": "preview",
+    "verb": "GET",
+    "path": "/v1/flow/preview",
+    "type": "WhatsappFlowPreviewResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "flowId"
+      }
+    ],
+    "query": [
+      [
+        "flowId",
+        "flowId"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "FlowApi",
+    "method": "publish",
+    "verb": "POST",
+    "path": "/v1/flow/publish",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappFlowIdRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "FlowApi",
+    "method": "deprecate",
+    "verb": "POST",
+    "path": "/v1/flow/deprecate",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappFlowIdRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "FlowApi",
+    "method": "delete",
+    "verb": "POST",
+    "path": "/v1/flow/delete",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappFlowIdRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "FlowApi",
+    "method": "migrate",
+    "verb": "POST",
+    "path": "/v1/flow/migrate",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappFlowMigrateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "FlowApi",
+    "method": "list",
+    "verb": "GET",
+    "path": "/v1/flow/list",
+    "type": "WhatsappFlowListResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "wabaId"
+      },
+      {
+        "type": "String",
+        "name": "fields"
+      },
+      {
+        "type": "Integer",
+        "name": "limit"
+      },
+      {
+        "type": "String",
+        "name": "after"
+      }
+    ],
+    "query": [
+      [
+        "wabaId",
+        "wabaId"
+      ],
+      [
+        "fields",
+        "fields"
+      ],
+      [
+        "limit",
+        "limit"
+      ],
+      [
+        "after",
+        "after"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "FlowApi",
+    "method": "details",
+    "verb": "GET",
+    "path": "/v1/flow/details",
+    "type": "WhatsappFlowItem",
+    "params": [
+      {
+        "type": "String",
+        "name": "flowId"
+      },
+      {
+        "type": "String",
+        "name": "fields"
+      }
+    ],
+    "query": [
+      [
+        "flowId",
+        "flowId"
+      ],
+      [
+        "fields",
+        "fields"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "FlowApi",
+    "method": "assets",
+    "verb": "GET",
+    "path": "/v1/flow/assets",
+    "type": "WhatsappFlowAssetsResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "flowId"
+      },
+      {
+        "type": "String",
+        "name": "fields"
+      }
+    ],
+    "query": [
+      [
+        "flowId",
+        "flowId"
+      ],
+      [
+        "fields",
+        "fields"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "FlowApi",
+    "method": "setEncryption",
+    "verb": "POST",
+    "path": "/v1/flow/encryption/set",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappFlowEncryptionSetRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "FlowApi",
+    "method": "getEncryption",
+    "verb": "GET",
+    "path": "/v1/flow/encryption/get",
+    "type": "WhatsappFlowEncryptionResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "phoneNumberId"
+      }
+    ],
+    "query": [
+      [
+        "phoneNumberId",
+        "phoneNumberId"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "GroupApi",
+    "method": "create",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/create",
+    "type": "WhatsappGroupCreateResult",
+    "params": [
+      {
+        "type": "WhatsappGroupCreateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "GroupApi",
+    "method": "list",
+    "verb": "GET",
+    "path": "/v1/whatsapp/group/list",
+    "type": "WhatsappGroupListResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "phoneId"
+      },
+      {
+        "type": "String",
+        "name": "fields"
+      },
+      {
+        "type": "Long",
+        "name": "limit"
+      },
+      {
+        "type": "String",
+        "name": "after"
+      }
+    ],
+    "query": [
+      [
+        "phoneId",
+        "phoneId"
+      ],
+      [
+        "fields",
+        "fields"
+      ],
+      [
+        "limit",
+        "limit"
+      ],
+      [
+        "after",
+        "after"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "GroupApi",
+    "method": "details",
+    "verb": "GET",
+    "path": "/v1/whatsapp/group/details",
+    "type": "WhatsappGroupDetailsResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "groupId"
+      },
+      {
+        "type": "String",
+        "name": "fields"
+      }
+    ],
+    "query": [
+      [
+        "groupId",
+        "groupId"
+      ],
+      [
+        "fields",
+        "fields"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "GroupApi",
+    "method": "update",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/update",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappGroupUpdateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "GroupApi",
+    "method": "delete",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/delete",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappGroupDeleteRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "GroupApi",
+    "method": "participantsRemove",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/participants/remove",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappGroupParticipantsRemoveRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "GroupApi",
+    "method": "inviteLink",
+    "verb": "GET",
+    "path": "/v1/whatsapp/group/inviteLink",
+    "type": "WhatsappGroupInviteLinkResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "groupId"
+      }
+    ],
+    "query": [
+      [
+        "groupId",
+        "groupId"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "GroupApi",
+    "method": "inviteLinkReset",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/inviteLink/reset",
+    "type": "WhatsappGroupInviteLinkResetResult",
+    "params": [
+      {
+        "type": "WhatsappGroupInviteLinkResetRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "GroupApi",
+    "method": "joinRequestList",
+    "verb": "GET",
+    "path": "/v1/whatsapp/group/joinRequests",
+    "type": "WhatsappGroupJoinRequestListResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "groupId"
+      },
+      {
+        "type": "Long",
+        "name": "limit"
+      },
+      {
+        "type": "String",
+        "name": "after"
+      }
+    ],
+    "query": [
+      [
+        "groupId",
+        "groupId"
+      ],
+      [
+        "limit",
+        "limit"
+      ],
+      [
+        "after",
+        "after"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "GroupApi",
+    "method": "joinRequestApprove",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/joinRequests/approve",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappGroupJoinRequestApproveRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "GroupApi",
+    "method": "joinRequestReject",
+    "verb": "POST",
+    "path": "/v1/whatsapp/group/joinRequests/reject",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappGroupJoinRequestRejectRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "MessageApi",
+    "method": "sendBlock",
+    "verb": "POST",
+    "path": "/open/whatsapp/message/send/block",
+    "type": "EventTaskIdResult",
+    "params": [
+      {
+        "type": "SendBlockMessageRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "MessageApi",
+    "method": "send",
+    "verb": "POST",
+    "path": "/open/whatsapp/message/send",
+    "type": "MessageIdResult",
+    "params": [
+      {
+        "type": "SendMessageRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "MessageApi",
+    "method": "upload",
+    "verb": "POST",
+    "path": "/open/whatsapp/file/upload/url",
+    "type": "MediaIdResult",
+    "params": [
+      {
+        "type": "MediaFileUploadRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "MessageApi",
+    "method": "download",
+    "verb": "POST",
+    "path": "/open/whatsapp/file/download",
+    "type": "DownloadUrlResult",
+    "params": [
+      {
+        "type": "MediaFileDownloadRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "MessageApi",
+    "method": "batchQueryOrigin",
+    "verb": "POST",
+    "path": "/open/whatsapp/message/origin/batchQuery",
+    "type": "MessageOriginBatchQueryResponse",
+    "params": [
+      {
+        "type": "MessageOriginBatchQueryRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "MessageApi",
+    "method": "deleteMedia",
+    "verb": "POST",
+    "path": "/v1/whatsapp/file/delete",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappMediaDeleteRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "getCategoryTree",
+    "verb": "GET",
+    "path": "/tags/categories/tree",
+    "type": "List<CategoryNodeResponse>",
+    "params": [],
+    "query": [],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "TagApi",
+    "method": "createCategory",
+    "verb": "POST",
+    "path": "/tags/categories/create",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "CreateCategoryRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "updateCategory",
+    "verb": "POST",
+    "path": "/tags/categories/update",
+    "type": "BooleanResult",
+    "params": [
+      {
+        "type": "UpdateCategoryRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "deleteCategory",
+    "verb": "POST",
+    "path": "/tags/categories/delete",
+    "type": "BooleanResult",
+    "params": [
+      {
+        "type": "DeleteCategoryRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "moveCategory",
+    "verb": "POST",
+    "path": "/tags/categories/move",
+    "type": "BooleanResult",
+    "params": [
+      {
+        "type": "MoveCategoryRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "listStaticTags",
+    "verb": "GET",
+    "path": "/tags/static/list",
+    "type": "PageResult<TagStaticListItemResponse>",
+    "params": [
+      {
+        "type": "String",
+        "name": "categoryId"
+      },
+      {
+        "type": "String",
+        "name": "name"
+      },
+      {
+        "type": "Integer",
+        "name": "pageNo"
+      },
+      {
+        "type": "Integer",
+        "name": "pageSize"
+      }
+    ],
+    "query": [
+      [
+        "categoryId",
+        "categoryId"
+      ],
+      [
+        "name",
+        "name"
+      ],
+      [
+        "pageNo",
+        "pageNo"
+      ],
+      [
+        "pageSize",
+        "pageSize"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "TagApi",
+    "method": "getStaticTagDetail",
+    "verb": "GET",
+    "path": "/tags/static/detail",
+    "type": "TagDetailResponse",
+    "params": [
+      {
+        "type": "String",
+        "name": "tagId"
+      }
+    ],
+    "query": [
+      [
+        "tagId",
+        "tagId"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "TagApi",
+    "method": "createStaticTag",
+    "verb": "POST",
+    "path": "/tags/static/create",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "CreateStaticTagRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "updateStaticTag",
+    "verb": "POST",
+    "path": "/tags/static/update",
+    "type": "BooleanResult",
+    "params": [
+      {
+        "type": "UpdateStaticTagRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "deleteStaticTag",
+    "verb": "POST",
+    "path": "/tags/static/delete",
+    "type": "BooleanResult",
+    "params": [
+      {
+        "type": "DeleteStaticTagRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "moveStaticTag",
+    "verb": "POST",
+    "path": "/tags/static/move",
+    "type": "BooleanResult",
+    "params": [
+      {
+        "type": "MoveStaticTagRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "getUserTags",
+    "verb": "GET",
+    "path": "/tags/user/tags",
+    "type": "List<UserTagResponse>",
+    "params": [
+      {
+        "type": "String",
+        "name": "userId"
+      },
+      {
+        "type": "String",
+        "name": "channel"
+      }
+    ],
+    "query": [
+      [
+        "userId",
+        "userId"
+      ],
+      [
+        "channel",
+        "channel"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "TagApi",
+    "method": "attachUserTag",
+    "verb": "POST",
+    "path": "/tags/user/tags/attach",
+    "type": "BooleanResult",
+    "params": [
+      {
+        "type": "UserTagsAttachRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "detachUserTag",
+    "verb": "POST",
+    "path": "/tags/user/tags/detach",
+    "type": "BooleanResult",
+    "params": [
+      {
+        "type": "UserTagsDetachRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TagApi",
+    "method": "queryUsersByTagValue",
+    "verb": "POST",
+    "path": "/tags/users/query",
+    "type": "TagUsersPageResponse",
+    "params": [
+      {
+        "type": "TagUsersQueryRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "query",
+    "verb": "POST",
+    "path": "/open/whatsapp/template/query",
+    "type": "WhatsappTemplateQueryResponse",
+    "params": [
+      {
+        "type": "WhatsappTemplateQueryRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "create",
+    "verb": "POST",
+    "path": "/open/whatsapp/template/create",
+    "type": "WhatsappTemplateCreateResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateCreateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "update",
+    "verb": "POST",
+    "path": "/open/whatsapp/template/update",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateEditRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "delete",
+    "verb": "POST",
+    "path": "/open/whatsapp/template/delete",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateDeleteRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "uploadFile",
+    "verb": "POST",
+    "path": "/open/whatsapp/template/file/upload",
+    "type": "WhatsappTemplateFileUploadResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateFileUplodRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "details",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/details",
+    "type": "WhatsappTemplateDetailsResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "templateId"
+      },
+      {
+        "type": "String",
+        "name": "fields"
+      }
+    ],
+    "query": [
+      [
+        "templateId",
+        "templateId"
+      ],
+      [
+        "fields",
+        "fields"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "TemplateApi",
+    "method": "compare",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/compare",
+    "type": "WhatsappTemplateCompareResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "templateId"
+      },
+      {
+        "type": "String",
+        "name": "templateIds"
+      },
+      {
+        "type": "Long",
+        "name": "start"
+      },
+      {
+        "type": "Long",
+        "name": "end"
+      }
+    ],
+    "query": [
+      [
+        "templateId",
+        "templateId"
+      ],
+      [
+        "templateIds",
+        "templateIds"
+      ],
+      [
+        "start",
+        "start"
+      ],
+      [
+        "end",
+        "end"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "TemplateApi",
+    "method": "archive",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/archive",
+    "type": "WhatsappTemplateArchiveResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateArchiveRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "unarchive",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/unarchive",
+    "type": "WhatsappTemplateUnarchiveResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateUnarchiveRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "migrate",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/migrate",
+    "type": "WhatsappTemplateMigrateResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateMigrateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "preview",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/preview",
+    "type": "WhatsappTemplatePreviewResult",
+    "params": [
+      {
+        "type": "WhatsappTemplatePreviewRequest",
+        "name": "request"
+      }
+    ],
+    "query": [
+      [
+        "wabaId",
+        "request.getWabaId()"
+      ],
+      [
+        "category",
+        "request.getCategory()"
+      ],
+      [
+        "languages",
+        "request.getLanguages()"
+      ],
+      [
+        "addSecurityRecommendation",
+        "request.getAddSecurityRecommendation()"
+      ],
+      [
+        "codeExpirationMinutes",
+        "request.getCodeExpirationMinutes()"
+      ],
+      [
+        "buttonTypes",
+        "request.getButtonTypes()"
+      ],
+      [
+        "businessName",
+        "request.getBusinessName()"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "TemplateApi",
+    "method": "upsert",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/upsert",
+    "type": "WhatsappTemplateUpsertResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateUpsertRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "groupList",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/groups/list",
+    "type": "WhatsappTemplateGroupListResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "wabaId"
+      },
+      {
+        "type": "String",
+        "name": "fields"
+      },
+      {
+        "type": "Long",
+        "name": "limit"
+      },
+      {
+        "type": "String",
+        "name": "after"
+      }
+    ],
+    "query": [
+      [
+        "wabaId",
+        "wabaId"
+      ],
+      [
+        "fields",
+        "fields"
+      ],
+      [
+        "limit",
+        "limit"
+      ],
+      [
+        "after",
+        "after"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "TemplateApi",
+    "method": "groupCreate",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/groups/create",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateGroupCreateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "groupDetails",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/groups/details",
+    "type": "WhatsappTemplateGroupDetailsResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "templateGroupId"
+      },
+      {
+        "type": "String",
+        "name": "fields"
+      }
+    ],
+    "query": [
+      [
+        "templateGroupId",
+        "templateGroupId"
+      ],
+      [
+        "fields",
+        "fields"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "TemplateApi",
+    "method": "groupUpdate",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/groups/update",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateGroupUpdateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "groupDelete",
+    "verb": "POST",
+    "path": "/v1/whatsapp/template/groups/delete",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateGroupDeleteRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "TemplateApi",
+    "method": "library",
+    "verb": "GET",
+    "path": "/v1/whatsapp/template/library",
+    "type": "WhatsappTemplateLibraryResult",
+    "params": [
+      {
+        "type": "WhatsappTemplateLibraryRequest",
+        "name": "request"
+      }
+    ],
+    "query": [
+      [
+        "category",
+        "request.getCategory()"
+      ],
+      [
+        "search",
+        "request.getSearch()"
+      ],
+      [
+        "topic",
+        "request.getTopic()"
+      ],
+      [
+        "usecase",
+        "request.getUsecase()"
+      ],
+      [
+        "industry",
+        "request.getIndustry()"
+      ],
+      [
+        "language",
+        "request.getLanguage()"
+      ],
+      [
+        "name",
+        "request.getName()"
+      ],
+      [
+        "limit",
+        "request.getLimit()"
+      ],
+      [
+        "after",
+        "request.getAfter()"
+      ],
+      [
+        "before",
+        "request.getBefore()"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "WelcomeMessageApi",
+    "method": "create",
+    "verb": "POST",
+    "path": "/v1/whatsapp/welcomeMessage/create",
+    "type": "StringIdResult",
+    "params": [
+      {
+        "type": "WhatsappWelcomeMessageCreateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "WelcomeMessageApi",
+    "method": "list",
+    "verb": "GET",
+    "path": "/v1/whatsapp/welcomeMessage/list",
+    "type": "WhatsappWelcomeMessageListResult",
+    "params": [
+      {
+        "type": "String",
+        "name": "wabaId"
+      },
+      {
+        "type": "String",
+        "name": "sequenceId"
+      },
+      {
+        "type": "Long",
+        "name": "limit"
+      },
+      {
+        "type": "String",
+        "name": "after"
+      }
+    ],
+    "query": [
+      [
+        "wabaId",
+        "wabaId"
+      ],
+      [
+        "sequenceId",
+        "sequenceId"
+      ],
+      [
+        "limit",
+        "limit"
+      ],
+      [
+        "after",
+        "after"
+      ]
+    ],
+    "multipart": false,
+    "jsonBody": false
+  },
+  {
+    "api": "WelcomeMessageApi",
+    "method": "update",
+    "verb": "POST",
+    "path": "/v1/whatsapp/welcomeMessage/update",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappWelcomeMessageUpdateRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  },
+  {
+    "api": "WelcomeMessageApi",
+    "method": "delete",
+    "verb": "POST",
+    "path": "/v1/whatsapp/welcomeMessage/delete",
+    "type": "MetaSuccessResult",
+    "params": [
+      {
+        "type": "WhatsappWelcomeMessageDeleteRequest",
+        "name": "request"
+      }
+    ],
+    "query": [],
+    "multipart": false,
+    "jsonBody": true
+  }
+]

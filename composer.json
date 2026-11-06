@@ -1,0 +1,12 @@
+{
+    "name": "meetbot/meetbot-openapi-php-sdk",
+    "description": "Meetbot OpenAPI PHP SDK",
+    "type": "library",
+    "license": "Apache-2.0",
+    "require": {"php": "^8.3", "ext-json": "*", "guzzlehttp/guzzle": "^7.0"},
+    "require-dev": {"phpunit/phpunit": "^12.0"},
+    "autoload": {"psr-4": {"Meetbot\\OpenApi\\": "src/"}},
+    "autoload-dev": {"psr-4": {"Meetbot\\OpenApi\\Tests\\": "tests/"}},
+    "scripts": {"test": "phpunit", "test:live": "@php examples/list-block-groups.php"},
+    "config": {"sort-packages": true}
+}
